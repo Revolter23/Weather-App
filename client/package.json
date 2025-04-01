@@ -8,8 +8,8 @@
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"server": "node index --prefix ../server",
-		"client": "concurrently \"npm run build\" \"npm run server\""
+		"server": "nodemon index --prefix ../server",
+		"client": "concurrently \"npm run dev\" \"npm run server\""
 	},
 	"dependencies": {
 		"@emotion/react": "^11.13.5",
