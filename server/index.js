@@ -1,11 +1,12 @@
 import express from "express";
 import bodyParser from "body-parser";
-// import "dotenv/config";
-import dotenv from "dotenv";
+import "dotenv/config";
+// import dotenv from "dotenv";
 import axios from "axios";
 import cors from "cors";
 
-dotenv.config({ path: "../.env" });
+// dotenv.config({ path: "env" });
+// { path: "../.env" }
 
 const app = express();
 const port = process.env.PORT || 8080;
