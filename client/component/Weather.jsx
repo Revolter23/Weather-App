@@ -5,8 +5,6 @@ import "./Weather.css";
 function Weather({ latitude, longitude }) {
 	const [data, setData] = useState(null);
 
-	let description = "";
-
 	const baseUrl = import.meta.env.VITE_BASEURL + latitude + "/" + longitude;
 
 	useEffect(() => {
@@ -19,8 +17,6 @@ function Weather({ latitude, longitude }) {
 				console.log(error.response.data);
 			});
 	}, []);
-	// let description = data.current.weather[0].description;
-	// const newDes = description.map(word => {word.charAt(0).toUpperCase() + word.slice(1)})
 
 	return (
 		<>
