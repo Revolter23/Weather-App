@@ -14,7 +14,7 @@ function Weather({ latitude, longitude }) {
 				setData(response.data);
 			})
 			.catch((error) => {
-				console.log(error.response.data);
+				console.log(error);
 			});
 	}, []);
 
