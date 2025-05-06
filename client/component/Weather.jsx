@@ -31,12 +31,10 @@ function Weather({ latitude, longitude }) {
 
 				const weatherCode = data.current.weather[0].id;
 
-				console.log(weatherCode);
 				if (weatherCode === 800) {
 					document.body.style.backgroundImage = `url(${map[weatherCode]})`;
 				} else {
 					const categoryCode = Number(weatherCode.toString()[0]);
-					console.log(categoryCode);
 					document.body.style.backgroundImage = `url(${map[categoryCode]})`;
 				}
 			} catch (error) {
