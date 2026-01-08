@@ -41,13 +41,13 @@ function App() {
 
 	const ipLocation = (signal, ignore) => {
 		axios
-			.get("https://ip-api.com/json/", {
+			.get("https://ipapi.co/json/", {
 				signal,
 			})
 			.then((response) => {
 				if (!ignore) {
-					setLatitude(response.data.lat);
-					setLongitude(response.data.lon);
+					setLatitude(response.data.latitude);
+					setLongitude(response.data.longitude);
 				}
 			})
 			.catch((error) => {
@@ -108,7 +108,7 @@ function App() {
 		try {
 			const newData = await serverRequest(lat, lon, controller.signal);
 
-			setCachedWeather(newData, latitude, longitude);
+			setCachedWeather(newData);
 			setData(newData);
 		} catch (error) {
 			console.error("Error fetching weather data:", error);

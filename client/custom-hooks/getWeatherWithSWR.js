@@ -13,7 +13,7 @@ function getCachedWeather() {
 	}
 }
 
-function setCachedWeather(data, lat, lon) {
+function setCachedWeather(data) {
 	const cacheEntry = {
 		data,
 		timestamp: Date.now(),
