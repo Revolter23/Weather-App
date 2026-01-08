@@ -3,11 +3,13 @@ import bodyParser from "body-parser";
 import "dotenv/config";
 import axios from "axios";
 import cors from "cors";
+import compression from "compression";
 
 const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(cors());
+app.use(compression());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
