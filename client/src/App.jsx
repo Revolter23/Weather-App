@@ -127,6 +127,29 @@ function App() {
 		};
 	}, [latitude, longitude]);
 
+	if (data) {
+		try {
+			const map = {
+				800: "/sunny day.jpg",
+				8: "/cloudy image.jpg",
+				5: "/rainy day.jpeg",
+				2: "/thunderstorm image.webp",
+				7: "/mist.jpeg",
+			};
+
+			const weatherCode = data.current.weather[0].id;
+
+			if (weatherCode === 800) {
+				document.body.style.backgroundImage = `url(${map[weatherCode]})`;
+			} else {
+				const categoryCode = Number(weatherCode.toString()[0]);
+				document.body.style.backgroundImage = `url(${map[categoryCode]})`;
+			}
+		} catch (error) {
+			console.error(error);
+		}
+	}
+
 	function handlePrecision() {
 		navigator.geolocation.getCurrentPosition(
 			(position) => {

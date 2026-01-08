@@ -32,9 +32,6 @@ body {
 	margin: 0;
 	min-width: 320px;
 	min-height: 100vh;
-	background-image: url("/sunny day.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
 }
 
 h1 {

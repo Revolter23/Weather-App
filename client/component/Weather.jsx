@@ -4,33 +4,10 @@ import axios from "axios";
 import "./Weather.scss";
 
 function Weather({ data }) {
-	if (data) {
-		try {
-			const map = {
-				800: "/sunny day.jpg",
-				8: "/cloudy image.jpg",
-				5: "/rainy day.jpeg",
-				2: "/thunderstorm image.webp",
-				7: "/mist.jpeg",
-			};
-
-			const weatherCode = data.current.weather[0].id;
-
-			if (weatherCode === 800) {
-				document.body.style.backgroundImage = `url(${map[weatherCode]})`;
-			} else {
-				const categoryCode = Number(weatherCode.toString()[0]);
-				document.body.style.backgroundImage = `url(${map[categoryCode]})`;
-			}
-		} catch (error) {
-			console.error(error);
-		}
-	}
-
 	return (
 		<>
 			{/* <p>{JSON.stringify(data)}</p> */}
-			<div id="content">
+			<main id="content">
 				<div className="left-items glass-sm">
 					<div className="left glass">
 						{data ? (
@@ -153,7 +130,7 @@ function Weather({ data }) {
 						</div>
 					</div>
 				</div>
-			</div>
+			</main>
 		</>
 	);
 }

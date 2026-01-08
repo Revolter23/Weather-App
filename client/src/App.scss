@@ -4,6 +4,9 @@
 	height: 100vh;
 	overflow: auto;
 	color: #4f4f4f;
+	background-image: url("/sunny day.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 	@media (max-width: 768px) {
 		display: flex;
 		flex-direction: column;
