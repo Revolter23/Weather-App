@@ -140,10 +140,14 @@ function App() {
 			const weatherCode = data.current.weather[0].id;
 
 			if (weatherCode === 800) {
-				document.body.style.backgroundImage = `url(${map[weatherCode]})`;
+				document.getElementsByClassName(
+					"container"
+				)[0].style.backgroundImage = `url(${map[weatherCode]})`;
 			} else {
 				const categoryCode = Number(weatherCode.toString()[0]);
-				document.body.style.backgroundImage = `url(${map[categoryCode]})`;
+				document.getElementsByClassName(
+					"container"
+				)[0].style.backgroundImage = `url(${map[categoryCode]})`;
 			}
 		} catch (error) {
 			console.error(error);
