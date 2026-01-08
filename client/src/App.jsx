@@ -41,7 +41,7 @@ function App() {
 
 	const ipLocation = (signal, ignore) => {
 		axios
-			.get("http://ip-api.com/json/", {
+			.get("https://ip-api.com/json/", {
 				signal,
 			})
 			.then((response) => {
